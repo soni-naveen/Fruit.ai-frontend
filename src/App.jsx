@@ -6,6 +6,9 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Home from "./components/Home";
 import About from "./components/About";
+import FAQ from "./components/FAQ";
+import Translator from "./components/Translator";
+import Chat from "./components/Chat";
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/faqs" element={<FAQ />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/translator" element={<Translator />} />
       </Routes>
     </>
   );
