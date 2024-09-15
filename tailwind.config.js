@@ -20,9 +20,6 @@ export default {
         "light-color": "#d7f7f5",
       },
     },
-    fontFamily: {
-      roboto: ["Roboto Slab"],
-    },
     important: true,
   },
   plugins: [],
