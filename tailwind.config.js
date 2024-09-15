@@ -13,13 +13,6 @@ export default {
       smxl: { max: "480px" },
       sm2xl: { max: "350px" },
     },
-    extend: {
-      colors: {
-        "dark-color": "#2a6171",
-        "medium-color": "#07b2a4",
-        "light-color": "#d7f7f5",
-      },
-    },
     important: true,
   },
   plugins: [],
