@@ -9,10 +9,10 @@ const Home = () => {
     <>
       <Navbar />
       <div className="flex flex-col items-center justify-center py-14 min-h-[calc(100vh-64px)] bg-gradient-to-r from-purple-300 to-teal-300">
-        <h1 className="text-6xl font-bold font-[cursive] text-white mb-4 sm2xl:text-3xl">
+        <h1 className="text-6xl font-bold font-[cursive] text-white mb-4 smxl:text-5xl sm2xl:text-3xl">
           Fruit.Ai
         </h1>
-        <p className="text-2xl text-white mb-8 font-[cursive] sm2xl:text-base">
+        <p className="text-2xl text-white mb-8 font-[cursive] smxl:text-xl sm2xl:text-base">
           "Be Healthy"
         </p>
 
