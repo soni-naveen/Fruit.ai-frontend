@@ -39,7 +39,6 @@ const FAQSection = () => {
           "https://fruit-ai-backend-mcei.onrender.com/faqs"
         );
         const data = await response.json();
-        console.log(data);
         setFaqItems(data.length > 0 ? [...defaultFaqs, ...data] : defaultFaqs);
       } catch (error) {
         console.error("Error fetching FAQs:", error);
