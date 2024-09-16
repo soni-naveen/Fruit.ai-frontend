@@ -34,7 +34,7 @@ const FAQSection = () => {
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
-        const response = await fetch("http://localhost:4000/faqs");
+        const response = await fetch("https://fruit-ai-frontend-eight.vercel.app/faqs");
         const data = await response.json();
         setFaqItems(data.length > 0 ? [...defaultFaqs, ...data] : defaultFaqs);
       } catch (error) {
@@ -51,7 +51,7 @@ const FAQSection = () => {
 
   const handleConfirmDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/faqs/${deleteId}`, {
+      const response = await fetch(`https://fruit-ai-frontend-eight.vercel.app/faqs/${deleteId}`, {
         method: "DELETE",
       });
       if (response.ok) {
@@ -83,7 +83,7 @@ const FAQSection = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:4000/faqs/${editItem._id}`,
+        `https://fruit-ai-frontend-eight.vercel.app/faqs/${editItem._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -124,7 +124,7 @@ const FAQSection = () => {
     setFaqItems((prevFaqItems) => [...prevFaqItems, newOrUpdatedFAQ]);
 
     try {
-      const response = await fetch("http://localhost:4000/faqs", {
+      const response = await fetch("https://fruit-ai-frontend-eight.vercel.app/faqs", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
