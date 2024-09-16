@@ -34,8 +34,11 @@ const FAQSection = () => {
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
-        const response = await fetch("https://fruit-ai-frontend-eight.vercel.app/faqs");
+        const response = await fetch(
+          "https://fruit-ai-backend-mcei.onrender.com/faqs"
+        );
         const data = await response.json();
+        console.log(data);
         setFaqItems(data.length > 0 ? [...defaultFaqs, ...data] : defaultFaqs);
       } catch (error) {
         console.error("Error fetching FAQs:", error);
@@ -51,9 +54,12 @@ const FAQSection = () => {
 
   const handleConfirmDelete = async () => {
     try {
-      const response = await fetch(`https://fruit-ai-frontend-eight.vercel.app/faqs/${deleteId}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://fruit-ai-backend-mcei.onrender.com/faqs/${deleteId}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (response.ok) {
         setFaqItems(faqItems.filter((item) => item._id !== deleteId));
         setShowDialog(false);
@@ -83,7 +89,7 @@ const FAQSection = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `https://fruit-ai-frontend-eight.vercel.app/faqs/${editItem._id}`,
+        `https://fruit-ai-backend-mcei.onrender.com/faqs/${editItem._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -124,14 +130,17 @@ const FAQSection = () => {
     setFaqItems((prevFaqItems) => [...prevFaqItems, newOrUpdatedFAQ]);
 
     try {
-      const response = await fetch("https://fruit-ai-frontend-eight.vercel.app/faqs", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          question: newItem.question,
-          answer: newItem.answer,
-        }),
-      });
+      const response = await fetch(
+        "https://fruit-ai-backend-mcei.onrender.com/faqs",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            question: newItem.question,
+            answer: newItem.answer,
+          }),
+        }
+      );
       if (response.ok) {
         const newFaq = await response.json();
         setFaqItems((prevFaqItems) =>
@@ -181,7 +190,7 @@ const FAQSection = () => {
               Add, Delete and Edit FAQ
             </p>
             <button
-              className="bg-teal-600 text-white py-3 px-4 rounded-md hover:bg-teal-700 transition duration-300 sm2xl:py-2 text-sm"
+              className="bg-teal-600 border border-gray-400 text-white py-3 px-4 rounded-md hover:bg-teal-700 transition duration-300 sm2xl:py-2 text-sm"
               onClick={() => setShowAddForm(true)}
             >
               Add FAQ
