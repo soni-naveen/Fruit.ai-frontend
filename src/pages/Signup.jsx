@@ -26,17 +26,17 @@ function Login() {
 
   return (
     <>
-      <div className="flex justify-evenly h-screen items-center md1:flex-col md1:justify-center md1:gap-10">
-        <div className="self-baseline mt-32 mb-5 font-[cursive] md1:self-center md1:mt-5 sm:mb-2">
-          <p className="text-8xl text-center font-bold text-teal-100 xl:text-7xl md1:text-6xl sm:text-5xl sm2xl:text-4xl">
+      <div className="flex justify-evenly h-screen items-center md1:flex-col md1:justify-center md1:gap-5 md1:my-10 sm:my-0">
+        <div className="mb-5 font-[cursive] sm:mb-2">
+          <p className="text-8xl drop-shadow-lg font-[cursive] text-center font-bold text-teal-100 xl:text-7xl md1:text-6xl sm:text-5xl sm2xl:text-4xl">
             Fruit.Ai
           </p>
-          <p className="text-xl mt-2 text-right font-medium text-teal-100 xl:text-base md1:text-sm md1:text-center sm:text-xs">
+          <p className="text-xl mt-2 text-right font-[cursive] font-medium text-teal-100 xl:text-base md1:text-sm md1:text-center sm:text-xs">
             Boost your health, naturally!
           </p>
         </div>
-        <div className="overflow-auto flex justify-center items-center">
-          <div className="rounded-xl bg-white py-6 px-10 flex flex-col gap-5 items-center sm2xl:px-6 sm2xl:py-4">
+        <div className="flex justify-center items-center">
+          <div className="rounded-xl bg-teal-50 py-6 px-10 flex flex-col gap-5 items-center sm2xl:px-6 sm2xl:py-4">
             <h1 className="text-[28px] font-bold text-teal-500 smxl:text-2xl">
               SignUp
             </h1>
@@ -70,7 +70,7 @@ function Login() {
                   value={email}
                   onChange={handleOnChange}
                   placeholder="Enter email address"
-                  className="w-[300px] px-3 py-3 text-black border border-gray-300 outline-none rounded-md text-sm sm:w-[250px] sm:py-2.5"
+                  className="w-[300px] bg-teal-50 px-3 py-3 text-black border border-gray-400 outline-none rounded-md text-sm sm:w-[250px] sm:py-2.5"
                 />
               </label>
               <label className="relative">
@@ -85,7 +85,7 @@ function Login() {
                   value={password}
                   onChange={handleOnChange}
                   placeholder="Enter Password"
-                  className="w-[300px] px-3 py-3 text-black border border-gray-300 outline-none rounded-md text-sm sm:w-[250px] sm:py-2.5"
+                  className="w-[300px] bg-teal-50 px-3 py-3 text-black border border-gray-400 outline-none rounded-md text-sm sm:w-[250px] sm:py-2.5"
                 />
                 <span
                   onClick={() => setShowPassword((prev) => !prev)}
@@ -110,7 +110,7 @@ function Login() {
                   value={confirmPassword}
                   onChange={handleOnChange}
                   placeholder="Confirm Password"
-                  className="w-[300px] px-3 py-3 text-black border border-gray-300 outline-none rounded-md text-sm sm:w-[250px] sm:py-2.5"
+                  className="w-[300px] bg-teal-50 px-3 py-3 text-black border border-gray-400 outline-none rounded-md text-sm sm:w-[250px] sm:py-2.5"
                 />
                 <span
                   onClick={() => setShowConfirmPassword((prev) => !prev)}

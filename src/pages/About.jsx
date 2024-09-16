@@ -15,7 +15,7 @@ const AboutPage = () => {
             className="h-full w-full object-cover"
           />
         </div>
-        <h1 className="text-3xl font-medium text-gray-900 mb-4 sm:text-2xl">
+        <h1 className="text-3xl font-bold text-teal-500 font-[cursive] mb-4 sm:text-2xl">
           Fruit.Ai
         </h1>
 

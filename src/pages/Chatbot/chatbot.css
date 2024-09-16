@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: sans-serif;
 }
 .react-chatbot-kit-chat-container {
   width: 600px;
@@ -32,7 +33,7 @@
   background-color: #a3dbd6;
   color: #2a6171;
   font-size: medium;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .react-chatbot-kit-chat-bot-avatar-container {
