@@ -36,7 +36,7 @@ const FAQSection = () => {
       try {
         const response = await fetch("http://localhost:4000/faqs");
         const data = await response.json();
-        setFaqItems(data.length > 0 ? data : defaultFaqs);
+        setFaqItems(data.length > 0 ? [...defaultFaqs, ...data] : defaultFaqs);
       } catch (error) {
         console.error("Error fetching FAQs:", error);
       }
@@ -69,8 +69,8 @@ const FAQSection = () => {
     setShowDialog(false);
   };
 
-  const handleEditClick = (item) => {
-    setEditItem(item);
+  const handleEditClick = (id) => {
+    setEditItem(faqItems.find((item) => item._id === id));
     setShowEditForm(true);
   };
 
@@ -87,10 +87,7 @@ const FAQSection = () => {
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            question: editItem.question,
-            answer: editItem.answer,
-          }),
+          body: JSON.stringify(editItem),
         }
       );
       if (response.ok) {
@@ -135,7 +132,6 @@ const FAQSection = () => {
           answer: newItem.answer,
         }),
       });
-      console.log(response);
       if (response.ok) {
         const newFaq = await response.json();
         setFaqItems((prevFaqItems) =>
@@ -163,7 +159,7 @@ const FAQSection = () => {
     <>
       <Navbar />
       <div className="min-h-[calc(100vh-64px)] grid place-items-center sm:mx-7">
-        <h2 className="text-4xl mt-5 drop-shadow font-bold text-center text-teal-300 smxl:text-3xl sm2xl:text-2xl">
+        <h2 className="text-4xl mb-5 mt-10 drop-shadow font-bold text-center text-teal-300 smxl:text-3xl sm2xl:text-2xl">
           FAQ Section
         </h2>
         <div className="flex self-baseline justify-around w-full mb-10 mt-5 lg:flex-col lg:items-center lg:gap-10 lg:mt-5 lg:mb-10">
