@@ -1,8 +1,19 @@
 # React + Vite
+### Installation :
+npm init -y\
+npm install\
+npm run dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Login Page
+Dummy UserId : dummyuser@gmail.com\
+Password : user1234
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## HomePage :
+Should have all the four services and redirect to the page onClick event
+### Chatbot :
+ A personal Chatbot able to display List of Fruits as cards, type => hi, list, price, bye\
+### Translator : 
+A page with input box being able to show the results in
+regional language
+### FAQ page
+### About page
